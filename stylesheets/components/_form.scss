@@ -5,7 +5,13 @@ form {
     border: none;
     border-radius: 5px;
     margin-right: 1rem;
-    width: 18rem;
+    width: 20rem;
+
+    @include mobile-port {
+      height: 3rem;
+      margin: 0 0 1rem;
+      width: inherit;
+    }
   }
 
   input[type="submit"] {
@@ -19,11 +25,23 @@ form {
     align-items: center;
     border-radius: 5px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     &:hover {
       background: $dark-pink;
     }
+
+    @include mobile-port {
+      height: 3rem;
+      align-self: flex-end;
+    }
+  }
+
+  @include mobile-port {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
   }
 }

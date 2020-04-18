@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease-in-out; }
   .main-button:hover {
     background: #ee2ba6; }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .main-button {
+      padding: 0 3rem;
+      height: 3rem; } }
 
 .nav-button {
   text-decoration: none;
@@ -54,18 +58,32 @@ h1, h2, h3, h4, h5, h6 {
 
 nav {
   width: 90%;
-  margin: 1.5rem auto 15rem;
+  margin: 2rem auto 14rem;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
   nav img {
     object-fit: contain; }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    nav {
+      margin-bottom: 13rem; } }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    nav {
+      margin-bottom: 9rem; }
+      nav img {
+        height: 1.2rem; } }
 
 form input[type='email'] {
   height: 2.5rem;
   border: none;
   border-radius: 5px;
   margin-right: 1rem;
-  width: 18rem; }
+  width: 20rem; }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    form input[type='email'] {
+      height: 3rem;
+      margin: 0 0 1rem;
+      width: inherit; } }
 form input[type="submit"] {
   background: #ff52bf;
   color: white;
@@ -77,11 +95,21 @@ form input[type="submit"] {
   align-items: center;
   border-radius: 5px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease-in-out; }
   form input[type="submit"]:hover {
     background: #ee2ba6; }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    form input[type="submit"] {
+      height: 3rem;
+      align-self: flex-end; } }
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+  form {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column; } }
 
 .main-container {
   width: 100%;
@@ -92,34 +120,60 @@ form input[type="submit"] {
 header {
   max-width: 60rem;
   text-align: center;
-  margin-bottom: 8rem; }
+  margin-bottom: 6rem; }
+  header h1 {
+    font-size: 2.5rem; }
   header p {
     max-width: 37rem;
     margin: 2rem auto; }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    header h1 {
+      font-size: 1.5rem;
+      width: 80%;
+      margin: auto; }
+    header p {
+      font-size: 14.5px;
+      width: 85%; } }
 
 .top-illustration {
-  width: 80%;
+  width: 72%;
   max-width: 80rem;
   margin: auto; }
   .top-illustration img {
     width: 100%; }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .top-illustration {
+      width: 80%; } }
 
 .stats-container {
   display: flex;
   text-align: center;
-  width: 45rem;
-  justify-content: space-between; }
+  width: 42rem;
+  justify-content: space-between;
+  margin: 5rem 0 7rem; }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .stats-container {
+      margin-bottom: 6rem; } }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .stats-container {
+      flex-direction: column;
+      width: 45%;
+      margin: 6rem 0 4rem; } }
 
 .stats {
   display: flex;
   flex-direction: column; }
   .stats h1 {
-    font-size: 4rem; }
+    font-size: 4rem;
+    font-family: "Open Sans", "Helvetica", "sans-serif"; }
   .stats img {
     align-self: flex-start;
     width: 2rem; }
   .stats p {
     opacity: 0.6; }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .stats:first-child {
+      margin-bottom: 5rem; } }
 
 .features {
   display: flex;
@@ -140,6 +194,19 @@ header {
     display: block; }
     .feature-content .feature-desc h2 {
       margin-bottom: 1.5rem; }
+    @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+      .feature-content .feature-desc {
+        margin: 0 2rem; } }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .feature-content {
+      flex-direction: column;
+      text-align: center;
+      padding: 4rem 0; }
+      .feature-content p {
+        font-size: 14px; }
+      .feature-content img {
+        width: 75%;
+        margin-bottom: 5rem; } }
 
 .feature.wave .feature-content {
   background: #f5faff; }
@@ -149,37 +216,72 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   display: block; }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .feature.wave .wave1-top {
+      height: 112px;
+      background-image: url("../../images/bg-section-top-mobile-1.svg"); } }
+  @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .feature.wave .wave1-top {
+      width: 120%; } }
 .feature.wave .wave1-bottom {
   height: 139px;
   background-image: url("../../images/bg-section-bottom-desktop-1.svg");
   background-repeat: no-repeat;
   background-position: center;
   display: block; }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .feature.wave .wave1-bottom {
+      height: 52px;
+      background-image: url("../../images/bg-section-bottom-mobile-1.svg"); } }
+  @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .feature.wave .wave1-bottom {
+      width: 120%; } }
 .feature.wave .wave2-top {
   height: 156px;
   background-image: url("../../images/bg-section-top-desktop-2.svg");
   background-repeat: no-repeat;
   background-position: center;
   display: block; }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .feature.wave .wave2-top {
+      height: 103px;
+      background-image: url("../../images/bg-section-top-mobile-2.svg"); } }
+  @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .feature.wave .wave2-top {
+      width: 120%; } }
 .feature.wave .wave2-bottom {
   height: 139px;
   background-image: url("../../images/bg-section-bottom-desktop-2.svg");
   background-repeat: no-repeat;
   background-position: center;
   display: block; }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .feature.wave .wave2-bottom {
+      height: 101px;
+      background-image: url("../../images/bg-section-bottom-mobile-2.svg"); } }
+  @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .feature.wave .wave2-bottom {
+      width: 120%; } }
 
 .feature.nowave {
   margin: 7rem 0; }
   .feature.nowave .feature-content {
     flex-direction: row; }
+    @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+      .feature.nowave .feature-content {
+        flex-direction: column;
+        padding: 4rem 0; } }
 
 .header-bottom {
   max-width: 60rem;
   text-align: center;
-  margin: 8rem 0; }
+  margin: 9rem 0; }
   .header-bottom p {
     max-width: 37rem;
     margin: 2rem auto; }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .header-bottom {
+      margin: 5rem 0 14rem; } }
 
 footer {
   width: 100%; }
@@ -193,18 +295,29 @@ footer {
   filter: invert(1) saturate(0) brightness(2); }
 
 .wave-footer {
-  height: 158px;
+  height: 156px;
   background-image: url("../../images/bg-footer-top-desktop.svg");
   background-repeat: no-repeat;
   background-position: center;
   display: block; }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .wave-footer {
+      height: 53px;
+      background-image: url("../../images/bg-footer-top-mobile.svg"); } }
+  @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .wave-footer {
+      width: 120%; } }
 
 .footer-content {
   background: #00252e;
   color: #f5faff;
   display: flex;
   justify-content: space-between;
-  padding: 0 4rem; }
+  padding: 5rem 7rem 4rem; }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .footer-content {
+      flex-direction: column-reverse;
+      padding: 2rem; } }
 
 .footer-section .caps-subheader {
   text-transform: uppercase;
@@ -214,14 +327,23 @@ footer {
   margin: 0; }
 .footer-section p {
   margin: 2rem 0; }
-
 .footer-section:first-child {
-  width: 18rem; }
-
+  width: 21rem; }
 .footer-section:last-child {
   width: 30rem; }
   .footer-section:last-child p {
-    width: 18rem; }
+    width: 24rem; }
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+  .footer-section {
+    width: unset !important; }
+    .footer-section p {
+      width: unset !important;
+      font-size: 14px; }
+    .footer-section:last-child {
+      margin-bottom: 6rem; } }
+@media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+  .footer-section p {
+    width: unset !important; } }
 
 .contact {
   display: flex;
@@ -245,5 +367,8 @@ footer {
   padding-bottom: 2rem; }
   .credits a {
     text-decoration: underline; }
+  @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .credits {
+      padding-top: 1.5rem; } }
 
 /*# sourceMappingURL=style.css.map */

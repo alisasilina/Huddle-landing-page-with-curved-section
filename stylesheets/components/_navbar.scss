@@ -1,9 +1,22 @@
 nav {
   width: 90%;
-  margin: 1.5rem auto 15rem;
+  margin: 2rem auto 14rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   img {
     object-fit: contain;
   }
+
+  @include tablet-land {
+    margin-bottom: 13rem;
+  }
+
+  @include mobile-port {
+    margin-bottom: 9rem;
+    img {
+      height: 1.2rem;
+    }
+  }
 }
+
