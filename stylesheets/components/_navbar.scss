@@ -12,6 +12,17 @@ nav {
     margin-bottom: 13rem;
   }
 
+  @include tablet-port {
+    margin-bottom: 13rem;
+  }
+
+  @include mobile-land {
+    margin-bottom: 6rem;
+    img {
+      height: 2rem;
+    }
+  }
+
   @include mobile-port {
     margin-bottom: 9rem;
     img {

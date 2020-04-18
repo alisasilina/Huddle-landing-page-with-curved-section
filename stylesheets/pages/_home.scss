@@ -29,6 +29,20 @@ header {
       width: 85%;
     }
   }
+
+  @include mobile-land {
+    h1 {
+      font-size: 2rem;
+      width: 80%;
+      margin: auto;
+    }
+  }
+
+  @include tablet-port {
+    h1 {
+      font-size: 2rem;
+    }
+  }
 }
 
 // Top-section
@@ -57,10 +71,18 @@ header {
     margin-bottom: 6rem;
   }
 
+  @include tablet-port {
+    width: 32rem;
+  }
+
   @include mobile-port {
     flex-direction: column;
     width: 45%;
     margin: 6rem 0 4rem;
+  }
+
+  @include mobile-land {
+    width: 70%;
   }
 }
 
@@ -113,6 +135,14 @@ header {
     @include mobile-port {
       margin: 0 2rem;
     }
+
+    @include mobile-land {
+      margin: 0 1rem 0 3rem;
+    }
+
+    @include tablet-port {
+      margin: 0 0 0 3rem;
+    }
   }
 
   @include mobile-port {
@@ -127,6 +157,25 @@ header {
       margin-bottom: 5rem;
     }
   }
+
+  @include mobile-land {
+    padding: 4rem 0;
+    p {
+      font-size: 14px;
+    }
+    img {
+      margin: 0 2rem;
+      width: 45%;
+    }
+  }
+
+  @include tablet-port {
+    padding: 2rem 0;
+    img {
+      margin: 0 2rem;
+      width: 45%;
+    }
+  }
 }
 
 .feature.wave {
@@ -139,6 +188,7 @@ header {
     background-image: url('../../images/bg-section-top-desktop-1.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     display: block;
 
     @include mobile-port {
@@ -147,7 +197,7 @@ header {
     }
 
     @include mobile-land {
-      width: 120%;
+      width: unset;
     }
   }
 
@@ -156,6 +206,7 @@ header {
     background-image: url('../../images/bg-section-bottom-desktop-1.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     display: block;
 
     @include mobile-port {
@@ -164,7 +215,7 @@ header {
     }
 
     @include mobile-land {
-      width: 120%;
+      width: unset;
     }
   }
 
@@ -173,6 +224,7 @@ header {
     background-image: url('../../images/bg-section-top-desktop-2.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     display: block;
 
     @include mobile-port {
@@ -181,7 +233,7 @@ header {
     }
 
     @include mobile-land {
-      width: 120%;
+      width: unset;
     }
   }
 
@@ -190,6 +242,7 @@ header {
     background-image: url('../../images/bg-section-bottom-desktop-2.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     display: block;
 
     @include mobile-port {
@@ -198,13 +251,23 @@ header {
     }
 
     @include mobile-land {
-      width: 120%;
+      width: unset;
     }
   }
 }
 
 .feature.nowave {
   margin: 7rem 0;
+
+  .feature-desc {
+    @include mobile-land {
+      margin: 0 3rem 0 1rem;
+    }
+
+    @include tablet-port {
+      margin: 0 3rem 0 0;
+    }
+  }
   .feature-content {
     flex-direction: row;
 
@@ -247,10 +310,11 @@ footer {
 }
 
 .wave-footer {
-  height: 156px;
+  height: 158px;
   background-image: url('../../images/bg-footer-top-desktop.svg');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   display: block;
 
   @include mobile-port {
@@ -259,7 +323,7 @@ footer {
   }
 
   @include mobile-land {
-    width: 120%;
+    width: unset;
   }
 }
 
@@ -273,6 +337,14 @@ footer {
   @include mobile-port {
     flex-direction: column-reverse;
     padding: 2rem;
+  }
+
+  @include mobile-land {
+    padding: 4rem 3rem 4rem;
+  }
+
+  @include tablet-port {
+    padding: 4rem 3rem 4rem;
   }
 }
 
@@ -297,6 +369,18 @@ footer {
     p {
       width: 24rem;
     }
+
+    @include tablet-land {
+      width: 21rem;
+    }
+
+    @include tablet-port {
+      width: 20rem;
+      margin-left: 3rem;
+      p {
+        width: unset;
+      }
+    }
   }
 
   @include mobile-port {
@@ -311,8 +395,10 @@ footer {
   }
 
   @include mobile-land {
+    width: 16rem !important;
     p {
       width: unset !important;
+      font-size: 14px;
     }
   }
 }

@@ -67,6 +67,14 @@ nav {
   @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     nav {
       margin-bottom: 13rem; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    nav {
+      margin-bottom: 13rem; } }
+  @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    nav {
+      margin-bottom: 6rem; }
+      nav img {
+        height: 2rem; } }
   @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
     nav {
       margin-bottom: 9rem; }
@@ -84,6 +92,18 @@ form input[type='email'] {
       height: 3rem;
       margin: 0 0 1rem;
       width: inherit; } }
+  @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    form input[type='email'] {
+      width: -webkit-fill-available;
+      margin: 0 0 1rem;
+      height: 3rem; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    form input[type='email'] {
+      width: -webkit-fill-available;
+      margin: 0 0 1rem; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    form input[type='email'] {
+      margin: 0 0 1rem; } }
 form input[type="submit"] {
   background: #ff52bf;
   color: white;
@@ -104,10 +124,31 @@ form input[type="submit"] {
     form input[type="submit"] {
       height: 3rem;
       align-self: flex-end; } }
+  @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    form input[type="submit"] {
+      height: 3rem;
+      align-self: flex-end; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    form input[type="submit"] {
+      align-self: flex-end; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    form input[type="submit"] {
+      align-self: flex-end; } }
 @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
   form {
     width: 100%;
-    margin: auto;
+    display: flex;
+    flex-direction: column; } }
+@media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+  form {
+    display: flex;
+    flex-direction: column; } }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  form {
+    display: flex;
+    flex-direction: column; } }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  form {
     display: flex;
     flex-direction: column; } }
 
@@ -134,6 +175,14 @@ header {
     header p {
       font-size: 14.5px;
       width: 85%; } }
+  @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    header h1 {
+      font-size: 2rem;
+      width: 80%;
+      margin: auto; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    header h1 {
+      font-size: 2rem; } }
 
 .top-illustration {
   width: 72%;
@@ -154,11 +203,17 @@ header {
   @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .stats-container {
       margin-bottom: 6rem; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .stats-container {
+      width: 32rem; } }
   @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
     .stats-container {
       flex-direction: column;
       width: 45%;
       margin: 6rem 0 4rem; } }
+  @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .stats-container {
+      width: 70%; } }
 
 .stats {
   display: flex;
@@ -197,6 +252,12 @@ header {
     @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
       .feature-content .feature-desc {
         margin: 0 2rem; } }
+    @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+      .feature-content .feature-desc {
+        margin: 0 1rem 0 3rem; } }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      .feature-content .feature-desc {
+        margin: 0 0 0 3rem; } }
   @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
     .feature-content {
       flex-direction: column;
@@ -207,6 +268,20 @@ header {
       .feature-content img {
         width: 75%;
         margin-bottom: 5rem; } }
+  @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .feature-content {
+      padding: 4rem 0; }
+      .feature-content p {
+        font-size: 14px; }
+      .feature-content img {
+        margin: 0 2rem;
+        width: 45%; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .feature-content {
+      padding: 2rem 0; }
+      .feature-content img {
+        margin: 0 2rem;
+        width: 45%; } }
 
 .feature.wave .feature-content {
   background: #f5faff; }
@@ -215,6 +290,7 @@ header {
   background-image: url("../../images/bg-section-top-desktop-1.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   display: block; }
   @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
     .feature.wave .wave1-top {
@@ -222,12 +298,13 @@ header {
       background-image: url("../../images/bg-section-top-mobile-1.svg"); } }
   @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
     .feature.wave .wave1-top {
-      width: 120%; } }
+      width: unset; } }
 .feature.wave .wave1-bottom {
   height: 139px;
   background-image: url("../../images/bg-section-bottom-desktop-1.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   display: block; }
   @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
     .feature.wave .wave1-bottom {
@@ -235,12 +312,13 @@ header {
       background-image: url("../../images/bg-section-bottom-mobile-1.svg"); } }
   @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
     .feature.wave .wave1-bottom {
-      width: 120%; } }
+      width: unset; } }
 .feature.wave .wave2-top {
   height: 156px;
   background-image: url("../../images/bg-section-top-desktop-2.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   display: block; }
   @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
     .feature.wave .wave2-top {
@@ -248,12 +326,13 @@ header {
       background-image: url("../../images/bg-section-top-mobile-2.svg"); } }
   @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
     .feature.wave .wave2-top {
-      width: 120%; } }
+      width: unset; } }
 .feature.wave .wave2-bottom {
   height: 139px;
   background-image: url("../../images/bg-section-bottom-desktop-2.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   display: block; }
   @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
     .feature.wave .wave2-bottom {
@@ -261,10 +340,16 @@ header {
       background-image: url("../../images/bg-section-bottom-mobile-2.svg"); } }
   @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
     .feature.wave .wave2-bottom {
-      width: 120%; } }
+      width: unset; } }
 
 .feature.nowave {
   margin: 7rem 0; }
+  @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .feature.nowave .feature-desc {
+      margin: 0 3rem 0 1rem; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .feature.nowave .feature-desc {
+      margin: 0 3rem 0 0; } }
   .feature.nowave .feature-content {
     flex-direction: row; }
     @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
@@ -295,10 +380,11 @@ footer {
   filter: invert(1) saturate(0) brightness(2); }
 
 .wave-footer {
-  height: 156px;
+  height: 158px;
   background-image: url("../../images/bg-footer-top-desktop.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   display: block; }
   @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
     .wave-footer {
@@ -306,7 +392,7 @@ footer {
       background-image: url("../../images/bg-footer-top-mobile.svg"); } }
   @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
     .wave-footer {
-      width: 120%; } }
+      width: unset; } }
 
 .footer-content {
   background: #00252e;
@@ -318,6 +404,12 @@ footer {
     .footer-content {
       flex-direction: column-reverse;
       padding: 2rem; } }
+  @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .footer-content {
+      padding: 4rem 3rem 4rem; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .footer-content {
+      padding: 4rem 3rem 4rem; } }
 
 .footer-section .caps-subheader {
   text-transform: uppercase;
@@ -333,6 +425,15 @@ footer {
   width: 30rem; }
   .footer-section:last-child p {
     width: 24rem; }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .footer-section:last-child {
+      width: 21rem; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .footer-section:last-child {
+      width: 20rem;
+      margin-left: 3rem; }
+      .footer-section:last-child p {
+        width: unset; } }
 @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
   .footer-section {
     width: unset !important; }
@@ -342,8 +443,11 @@ footer {
     .footer-section:last-child {
       margin-bottom: 6rem; } }
 @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
-  .footer-section p {
-    width: unset !important; } }
+  .footer-section {
+    width: 16rem !important; }
+    .footer-section p {
+      width: unset !important;
+      font-size: 14px; } }
 
 .contact {
   display: flex;
